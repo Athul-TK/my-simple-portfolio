@@ -1,0 +1,193 @@
+*{
+    
+    background-color: #37353E; 
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    color: #ffff;
+    text-decoration: none;
+}
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.navbar .logo{
+    font-size: 55px;
+    font-weight: 800;
+}
+
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 15px;
+}
+.navbar ul li a{
+    font-size: 30px;
+    font-weight: 500;
+    transition: .5s;
+}
+.navbar ul li a:hover {
+    color: #F9E400;
+}
+.home-info{
+    color: aliceblue;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 10% 0;
+    color: #ffff;  
+}
+.info h1{
+    font-size: 50px;
+
+}
+.info h2{
+    font-size: 30px;
+    margin-top: -10px;
+}
+.info h2 span{
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #F9E400;
+    animation: dtext 16s linear infinite;
+}
+@keyframes dtext{
+    0% {
+        display: none;
+    }
+}
+
+.info p{
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+.info .social-button{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline;
+    padding: 10px 30px;
+    background-color: #F9E400;
+    border: 2px solid #F9E400;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #F9E400;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .5s;
+    animation: slide 1s ease forwards;
+}
+.btn:hover{
+   background: transparent;
+   color: #F9E400; 
+   box-shadow: none;
+}
+.info .social-button .social {
+    margin-left: 20px;
+    
+    
+}
+.info .social-button .social a{
+    margin-left: 25px;
+    padding: 8px;
+    border: 2px solid #F9E400;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #F9E400;
+    margin: 0 3px;
+    transition: .5s;
+    animation: social .5s ease reverse;
+}
+.info .social-button .social a:hover{
+    background: #F9E400;
+    color: #000000;
+    box-shadow: 0 0 10px;
+}
+.home-img .img-box{
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.home-img .img-box::before,
+.home-img .img-box::after{
+    content: '';
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: conic-gradient(transparent, transparent, transparent, #F9E400);
+    transform: rotate(0deg);
+    animation: rotate 15s linear infinite;
+}
+@keyframes rotate{
+    100% { 
+         transform: rotate(360deg);
+    }
+}
+.home-img .img-box .img1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #37353E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    border: .1px solid #37353E;
+}
+.home-img .img-box .img1 img{
+    position: absolute;
+    display: block;
+    top: 30px;
+    width: 85%;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 0;
+    mix-blend-mode: lighten;
+    
+}
+@keyframes slide {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}   
+@keyframes social {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 
